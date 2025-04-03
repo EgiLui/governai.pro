@@ -25,9 +25,9 @@ Articles are written in Markdown and rendered as clean, responsive web pages usi
 
 ## ✍️ Contributing
 
-This is a personal and professional initiative by [Egidijus Luinevicius](https://www.linkedin.com/in/egidijusluinevicius), currently shared for public use and learning.  
+This is a personal and professional initiative by [Egidijus Luinevicius](https://www.linkedin.com/in/egidijuslu/), currently shared for public use and learning.  
 
-Contributions are **not open** at this time. However, suggestions, collaboration ideas, or cross-linking requests are welcome via [LinkedIn](https://www.linkedin.com/in/egidijusluinevicius) or [email](mailto:your@email.com).
+Contributions are **not open** at this time. However, suggestions, collaboration ideas, or cross-linking requests are welcome via [LinkedIn](https://www.linkedin.com/in/egidijuslu/) or [email](mailto:egidijus.lu@icloud.com).
 
 ---
 
