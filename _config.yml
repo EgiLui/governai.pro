@@ -1,40 +1,35 @@
+# _config.yml — GovernAI.pro
 title: GovernAI.pro
-email: your@email.com
-description: >- # this means to ignore newlines until next key
-  AI & Data Strategy for Leaders
+email: contact@governai.pro
+description: >- 
+  Data & AI Governance for Strategy Leaders. 
+  Curated insights, tools, and implementation guides for public sector transformation.
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://egilui.github.io" # or your custom domain
+baseurl: "" # Leave empty unless you're using a project page (e.g., /repo-name/)
+url: "https://egilui.github.io" # Change to your GitHub Pages user/org domain if needed
+# url: "https://governai.pro" # Uncomment when ready for custom domain
 
-# disable default theme
-theme: null
+theme: # Leave blank — using Norlin locally via layouts/includes
 
-# directories
-source: .
-destination: ./_site
+plugins:
+  - jekyll-feed
+
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
 
-# Jekyll options
-future: true
-lsi: false
-incremental: false
+sass:
+  style: compressed
 
-permalink: pretty
-
-collections:
-  posts:
-    output: true
-
-# exclude folders from processing
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
   - node_modules
   - vendor
-  - README.md
 
-# optional plugins
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# Optional: Social Media + SEO (customise later)
+author:
+  name: Egidijus Luinevicius
+  email: contact@governai.pro
