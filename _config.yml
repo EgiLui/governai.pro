@@ -1,23 +1,40 @@
 title: GovernAI.pro
-email: your.email@example.com
-description: >-
-  Articles and strategies on Data & AI Governance for public sector leaders.
-baseurl: "" # leave this empty unless you're using a subdirectory
-url: "https://governai.pro"
+email: your@email.com
+description: >- # this means to ignore newlines until next key
+  AI & Data Strategy for Leaders
 
-# Author settings
-author:
-  name: Egidijus Luinevicius
-  email: your.email@example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://egilui.github.io" # or your custom domain
 
-# Social settings
-twitter_username: egilui
-github_username: EgiLui
-linkedin_username: egidijus-luinevicius
+# disable default theme
+theme: null
 
-# Build settings
+# directories
+source: .
+destination: ./_site
 markdown: kramdown
-theme: minima
+highlighter: rouge
+
+# Jekyll options
+future: true
+lsi: false
+incremental: false
+
+permalink: pretty
+
+collections:
+  posts:
+    output: true
+
+# exclude folders from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+# optional plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
