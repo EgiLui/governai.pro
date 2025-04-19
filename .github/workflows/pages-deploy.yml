@@ -1,4 +1,4 @@
-name: Deploy Norlin Theme to GitHub Pages
+name: Deploy Jekyll site to GitHub Pages
 
 on:
   push:
@@ -17,15 +17,14 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout source
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' # or use 3.2 if your Gemfile supports it
+          ruby-version: '3.1'
 
       - name: Install dependencies
         run: |
@@ -33,10 +32,10 @@ jobs:
           bundle config set --local path 'vendor/bundle'
           bundle install
 
-      - name: Build site with Jekyll
+      - name: Build the site
         run: bundle exec jekyll build
 
-      - name: Upload GitHub Pages artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./_site
@@ -47,7 +46,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
