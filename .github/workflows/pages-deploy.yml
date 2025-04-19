@@ -2,8 +2,7 @@ name: Build and Deploy Norlin Jekyll Site
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -12,32 +11,31 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Ruby
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: 3.1
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           gem install bundler
           bundle install
 
-      - name: Build Site
+      - name: Build site with Jekyll
         run: bundle exec jekyll build
 
-      - name: Upload Build
-        uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          name: github-pages
           path: _site
 
   deploy:
