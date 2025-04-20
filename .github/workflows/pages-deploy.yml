@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,8 +36,7 @@ jobs:
       - name: Build the site
         run: bundle exec jekyll build
 
-      # ✅ Upload using the correct action that GitHub Pages expects
-      - name: Upload Pages artifact
+      - name: Upload site artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./_site
@@ -47,7 +47,11 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
