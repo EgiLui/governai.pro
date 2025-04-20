@@ -1,15 +1,16 @@
 # _config.yml — GovernAI.pro
+
 title: GovernAI.pro
 email: contact@governai.pro
-description: >- 
-  Data & AI Governance for Strategy Leaders. 
+description: >-
+  Data & AI Governance for Strategy Leaders.
   Curated insights, tools, and implementation guides for public sector transformation.
 
 baseurl: "" # Leave empty unless you're using a project page (e.g., /repo-name/)
-url: "https://egilui.github.io" # Change to your GitHub Pages user/org domain if needed
-# url: "https://governai.pro" # Uncomment when ready for custom domain
+url: "https://egilui.github.io" # Use your GitHub Pages domain (change to custom later)
+# url: "https://governai.pro" # Uncomment when DNS is configured for custom domain
 
-theme: # Leave blank — using Norlin locally via layouts/includes
+# theme: norlin # Not required — using Norlin locally via _layouts/ and _includes
 
 plugins:
   - jekyll-feed
@@ -29,7 +30,7 @@ exclude:
   - node_modules
   - vendor
 
-# Optional: Social Media + SEO (customise later)
+# Optional: Author & SEO metadata
 author:
   name: Egidijus Luinevicius
   email: egidijus.lu@icloud.com
