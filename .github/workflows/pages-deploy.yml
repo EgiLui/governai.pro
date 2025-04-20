@@ -35,8 +35,8 @@ jobs:
       - name: Build the site
         run: bundle exec jekyll build
 
-      # ✅ Use the correct action expected by GitHub Pages
-      - name: Upload static site to Pages artifact
+      # ✅ Upload using the correct action that GitHub Pages expects
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./_site
