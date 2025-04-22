@@ -2,7 +2,7 @@
 name: 'GovernAI.pro'
 description: 'Data & AI Governance for Strategy Leaders. Curated insights, tools, and implementation guides for public sector transformation.'
 logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
+favicon: 'assets/images/favicon.png'
 baseurl: ''  # Leave empty for user/organization site or when using a custom domain
 url: 'https://governai.pro'  # Change to custom domain (https://governai.pro) when ready
 email: 'governaipro@gmail.com'
