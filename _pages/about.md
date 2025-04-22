@@ -1,8 +1,9 @@
 ---
-title: "About"
-layout: page-sidebar
-permalink: "/about.html"
-image: "/assets/images/screenshot.jpg"
-comments: true
+title: About
+layout: page
+permalink: /about/
 ---
-Made with <i class="fa fa-heart text-danger"></i> by Sal [@wowthemesnet](https://www.wowthemes.net/category/free-themes-templates/).
+
+GovernAI.pro is led by Egidijus Luinevicius, a data governance and AI strategy professional in the public sector.
+
+This site curates real-world examples, implementation tools, and strategic insights to support leaders adopting AI and data frameworks responsibly.
