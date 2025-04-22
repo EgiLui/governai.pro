@@ -4,10 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{ page.title }} | {{ site.name }}</title>
 
+  <!-- Improved Title Tag -->
+  <title>
+    {% if page.title %}
+      {{ page.title }} | {{ site.name }}
+    {% else %}
+      {{ site.name }} – {{ site.description }}
+    {% endif %}
+  </title>
+
+  <!-- SEO Tag Plugin -->
   {% seo %}
 
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Open Graph for Social Sharing -->
+  {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  {% endif %}
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/{{ site.favicon }}">
 
   <!-- Font Awesome Icons -->
@@ -23,23 +43,23 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css">
 
   <!-- jQuery in header to support inline scripts -->
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous">
   </script>
 
   {% include tracking-header.html %}
 </head>
 
-<body class="{% if page.url == '/' %} homefirstpage {% endif %}">
+<!-- Add dark-mode class if site.dark_mode: true in _config.yml -->
+<body class="{% if page.url == '/' %} homefirstpage {% endif %}{% if site.dark_mode == true %} dark-mode{% endif %}">
 
   <!-- Navbar -->
   <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
       <a class="navbar-brand" href="{{ site.baseurl }}/index.html"><strong>{{ site.name }}</strong></a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02"
-        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+              aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse collapse" id="navbarColor02">
@@ -72,7 +92,9 @@
           <span>&copy; <script>document.write(new Date().getFullYear())</script> All rights reserved.</span>
         </div>
         <div>
-          <span>Built with Jekyll · Theme adapted from <a class="text-dark font-weight-bold" target="_blank" href="https://github.com/wowthemesnet/mundana-theme-jekyll">Mundana</a>.</span>
+          <span>Built with Jekyll · Theme adapted from
+            <a class="text-dark font-weight-bold" target="_blank" href="https://github.com/wowthemesnet/mundana-theme-jekyll">Mundana</a>.
+          </span>
         </div>
       </div>
     </div>
@@ -80,13 +102,13 @@
 
   <!-- Scripts: Popper, Bootstrap, Theme JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous">
+          integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+          crossorigin="anonymous">
   </script>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous">
+          integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+          crossorigin="anonymous">
   </script>
 
   <script src="{{ site.baseurl }}/assets/js/theme.js"></script>
@@ -94,3 +116,4 @@
   {% include tracking-footer.html %}
 </body>
 </html>
+

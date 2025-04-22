@@ -72,6 +72,27 @@ body {
   text-align: left;
   background-color: #fff; }
 
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode a {
+    color: #90caf9;
+  }
+  
+  body.dark-mode .navbar,
+  body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #ccc;
+  }
+  
+  body.dark-mode .article-post {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 8px;
+  }  
+
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 

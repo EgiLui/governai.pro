@@ -1,34 +1,38 @@
-# Site
+# Site Metadata
 name: 'GovernAI.pro'
 description: 'Data & AI Governance for Strategy Leaders. Curated insights, tools, and implementation guides for public sector transformation.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.png'
-baseurl: ''  # Leave empty for user/organization site or when using a custom domain
-url: 'https://governai.pro'  # Change to custom domain (https://governai.pro) when ready
 email: 'governaipro@gmail.com'
-disqus: ''  # Leave empty or update if you set up Disqus
-mailchimp-list: ''  # Leave empty unless integrating newsletter
+url: 'https://governai.pro'
+baseurl: ''  # Keep empty for custom domains like https://governai.pro
 
-include: ["_pages"]
-permalink: /:title/
+# Discussion / Subscriptions (optional)
+disqus: ''            # Add your Disqus shortname here if enabled
+mailchimp-list: ''    # Add your Mailchimp form action URL if integrating
+
+# Navigation & Routing
+include: ["_pages"]   # Allow standalone pages
+permalink: /:title/   # Clean URLs like /step-1-data-leadership/
 
 # Plugins
 plugins: 
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-seo-tag
+  - jekyll-feed       # RSS feed
+  - jekyll-sitemap    # sitemap.xml
+  - jekyll-paginate   # pagination
+  - jekyll-seo-tag    # Open Graph + SEO meta
 
+# Author Profile
 authors:
-    egidijus:
-      name:           Egidijus Luinevicius
-      site:           https://governai.pro
-      avatar:         /assets/images/avatar1.jpg  # Replace with your own photo if desired
-      bio:            "Founder of GovernAI.pro — exploring open data, AI strategy, and digital innovation for the public sector."
-      email:          contact@governai.pro
-      twitter:        https://twitter.com/egidijuslu  # Optional: update with your actual Twitter handle
+  egidijus:
+    name: Egidijus Luinevicius
+    site: https://governai.pro
+    avatar: /assets/images/avatar1.jpg
+    bio: "Founder of GovernAI.pro — exploring open data, AI strategy, and digital innovation for the public sector."
+    email: contact@governai.pro
+    twitter: https://twitter.com/egidijuslu
 
-# Defaults
+# Global Default Values
 defaults:
   - scope:
       path: "_posts"
@@ -42,12 +46,22 @@ defaults:
     values:
       layout: page
 
-# Syntax
+# Markdown Rendering
 markdown: kramdown
 highlighter: rouge
 
-# Pagination
+# Pagination (10 posts per page)
 paginate: 10
 
-# Exclude metadata and dev dependencies
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+# Optional Dark Mode Toggle
+dark_mode: true
+
+# Exclude unnecessary dev files
+exclude:
+  - README.markdown
+  - package.json
+  - grunt.js
+  - Gruntfile.js
+  - Gruntfile.coffee
+  - node_modules
+
