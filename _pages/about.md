@@ -4,6 +4,13 @@ layout: page
 permalink: /about/
 ---
 
-GovernAI.pro is led by Egidijus Luinevicius, a data governance and AI strategy professional in the public sector.
+GovernAI.pro is curated by **Egidijus Luinevicius**, a public sector professional specialising in data governance, open data strategy, and the responsible adoption of artificial intelligence.
 
-This site curates real-world examples, implementation tools, and strategic insights to support leaders adopting AI and data frameworks responsibly.
+This platform is designed to serve as a practical companion for leaders navigating the evolving intersection of data, ethics, and innovation. Whether you're shaping policy, leading digital transformation, or designing public services, GovernAI.pro provides:
+
+- real-world implementation examples
+- strategic guidance on governance frameworks
+- tools and checklists for compliance and transparency
+- articles on emerging AI trends and public sector applications
+
+The goal is simple: help you lead confidently through the complexities of AI and data with clarity, responsibility, and impact.

@@ -1,1 +1,39 @@
-<!-- All this area goes before </body> closing tag --> 
+<!-- tracking-footer.html -->
+<!-- Insert analytics scripts and other tools here just before </body> -->
+
+<!-- Google Analytics: Global site tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V15RWVZ1DY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V15RWVZ1DY');
+</script>
+
+<!-- Cookie Consent (Osano) & Footer Tracking Scripts -->
+
+<!-- Cookie Consent stylesheet & script -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+<script>
+  window.addEventListener("load", function () {
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#000000" },
+        button: { background: "#f1d600" }
+      },
+      theme: "classic",
+      position: "bottom-right",
+      content: {
+        message: "We use cookies to improve your experience on GovernAI.pro.",
+        dismiss: "Got it!",
+        link: "Learn more",
+        href: "/privacy-policy"
+      }
+    });
+  });
+</script>
+
+<!-- Optional: Fallback tracking scripts or consent-based triggers can be added here -->
+
