@@ -1,35 +1,34 @@
 <div class="sticky-top sticky-top-offset">
-    <h4 class="font-weight-bold spanborder"><span>Featured</span></h4>
-  
-    {% assign featured_posts = site.tags.featured %}
-    {% if featured_posts %}
-      <ol class="list-featured">
-        {% for post in featured_posts %}
-          <li class="mb-4">
-            <span>
-              <h6 class="font-weight-bold">
-                <a href="{{ site.baseurl }}{{ post.url }}" class="text-dark">
-                  {{ post.title }}
-                </a>
-              </h6>
-              {% if post.categories %}
-                <span class="d-block text-muted">
-                  In
-                  <span class="catlist">
-                    {% for category in post.categories %}
-                      <a class="text-capitalize text-muted smoothscroll" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">
-                        {{ category }}
-                      </a>{% if forloop.last == false %}<span class="sep">, </span>{% endif %}
-                    {% endfor %}
-                  </span>
+  <h4 class="font-weight-bold spanborder"><span>Featured</span></h4>
+
+  {% assign featured_posts = site.tags.featured %}
+  {% if featured_posts %}
+    <ol class="list-featured">
+      {% for post in featured_posts %}
+        <li class="mb-4">
+          <span>
+            <h6 class="font-weight-bold">
+              <a href="{{ site.baseurl }}{{ post.url }}" class="text-dark">
+                {{ post.title }}
+              </a>
+            </h6>
+            {% if post.categories and post.categories.size > 0 %}
+              <span class="d-block text-muted">
+                In
+                <span class="catlist">
+                  {% for category in post.categories %}
+                    <a class="text-capitalize text-muted smoothscroll" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">
+                      {{ category }}
+                    </a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+                  {% endfor %}
                 </span>
-              {% endif %}
-            </span>
-          </li>
-        {% endfor %}
-      </ol>
-    {% else %}
-      <p class="text-muted small">No featured posts yet.</p>
-    {% endif %}
-  </div>
-  
+              </span>
+            {% endif %}
+          </span>
+        </li>
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p class="text-muted small">No featured posts yet.</p>
+  {% endif %}
+</div>
