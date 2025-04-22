@@ -29,8 +29,8 @@ authors:
     site: https://governai.pro
     avatar: /assets/images/avatar1.jpg
     bio: "Founder of GovernAI.pro — exploring open data, AI strategy, and digital innovation for the public sector."
-    email: contact@governai.pro
-    twitter: https://twitter.com/egidijuslu
+    email: governaipro@gmail.com
+    linkedin: https://www.linkedin.com/in/egidijuslu/
 
 # Global Default Values
 defaults:
@@ -53,8 +53,6 @@ highlighter: rouge
 # Pagination (10 posts per page)
 paginate: 10
 
-# Optional Dark Mode Toggle
-dark_mode: true
 
 # Exclude unnecessary dev files
 exclude:

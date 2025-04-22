@@ -72,50 +72,6 @@ body {
   text-align: left;
   background-color: #fff; }
 
-  /* Dark Mode Base */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-/* Links */
-body.dark-mode a {
-  color: #90caf9;
-}
-body.dark-mode a:hover {
-  text-decoration: underline;
-}
-
-/* Navbar */
-body.dark-mode .navbar,
-body.dark-mode .navbar-light {
-  background-color: #1f1f1f;
-  border-bottom: 1px solid #333;
-}
-body.dark-mode .navbar-brand,
-body.dark-mode .navbar-nav .nav-link {
-  color: #e0e0e0 !important;
-}
-
-/* Footer */
-body.dark-mode footer {
-  background-color: #1f1f1f;
-  color: #ccc;
-}
-
-/* Article Content */
-body.dark-mode .article-post {
-  background-color: #1a1a1a;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-}
-
-/* Code blocks */
-body.dark-mode pre,
-body.dark-mode code {
-  background-color: #222;
-  color: #eee;
-}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
