@@ -4,8 +4,8 @@ description: 'Data & AI Governance for Strategy Leaders. Curated insights, tools
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ''  # Leave empty for user/organization site or when using a custom domain
-url: 'https://egilui.github.io'  # Change to custom domain (https://governai.pro) when ready
-email: 'contact@governai.pro'
+url: 'https://governai.pro'  # Change to custom domain (https://governai.pro) when ready
+email: 'governaipro@gmail.com'
 disqus: ''  # Leave empty or update if you set up Disqus
 mailchimp-list: ''  # Leave empty unless integrating newsletter
 
