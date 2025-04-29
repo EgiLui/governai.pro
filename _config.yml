@@ -50,3 +50,5 @@ exclude:
   - Gruntfile.coffee
   - node_modules
 
+# Disable GitHub Pages default theme
+theme: null
