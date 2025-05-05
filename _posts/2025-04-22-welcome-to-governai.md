@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "First article out of the 10-Step Data Governance Implementation Series"
+title: "10-Step Data Governance Implementation Series"
 date: 2025-04-22
-categories: [intro]  # ← Add this line
-tags: [announcement]
-image: /assets/images/governai-preview.png  # optional
+categories: [data governance]
+tags: [data governance implementation]
+image: /assets/images/Data Governance.png  # optional
 ---
 
 # Step 1: Identify the Data Governance Leadership & Define the Scope
