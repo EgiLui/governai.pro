@@ -7,6 +7,15 @@ tags: [data governance implementation]
 image: /assets/images/data-governance.png  # optional
 ---
 
+<h4>Test Share Buttons</h4>
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+  <a class="a2a_button_facebook"></a>
+  <a class="a2a_button_x"></a>
+  <a class="a2a_button_linkedin"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
 # Step 1: Identify the Data Governance Leadership & Define the Scope
 
 > Part of the *10-Step Data Governance Implementation Series*  

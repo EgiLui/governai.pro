@@ -803,4 +803,9 @@ div.a2a_full_footer {display:none;}
 		 height:280px !Important;
 	 }
  }
- 
+ .a2a_kit a {
+	display: inline-block !important;
+	margin: 4px !important;
+	opacity: 1 !important;
+  }
+  
