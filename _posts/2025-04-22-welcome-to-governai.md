@@ -4,7 +4,7 @@ title: "10-Step Data Governance Implementation Series"
 date: 2025-04-22
 categories: [data governance]
 tags: [data governance implementation]
-image: /assets/images/Data Governance.png  # optional
+image: /assets/images/data-governance.png  # optional
 ---
 
 # Step 1: Identify the Data Governance Leadership & Define the Scope
