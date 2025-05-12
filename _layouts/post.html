@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="container">
   <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
     <div class="h-100 tofront">
@@ -8,7 +9,6 @@ layout: default
 
         <!-- Header Text Block -->
         <div class="{% if page.image %} col-md-6 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-4 pb-4 align-self-center">
-
           {% if page.categories %}
           <p class="text-uppercase font-weight-bold">
             {% for category in page.categories %}
@@ -16,13 +16,10 @@ layout: default
             {% endfor %}
           </p>
           {% endif %}
-
           <h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
-
           <div class="text-muted">
             {{ page.date | date: '%b %d, %Y' }} · {% include meta-read-time.html %}
           </div>
-
         </div>
 
         <!-- Featured Image Block -->
@@ -31,7 +28,6 @@ layout: default
           <img class="rounded" src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
         </div>
         {% endif %}
-
       </div>
     </div>
   </div>
@@ -46,10 +42,13 @@ layout: default
       <div class="sticky-top sticky-top-offset text-center">
         <div class="text-muted">Share this</div>
         <div class="share d-inline-block">
-          <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+          <div class="a2a_kit a2a_kit_size_32 a2a_default_style"
+               data-a2a-url="{{ page.url | absolute_url }}"
+               data-a2a-title="{{ page.title }}">
             <a class="a2a_button_facebook"></a>
             <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_linkedin"></a>
+            <a class="a2a_button_email"></a>
           </div>
           <script async src="https://static.addtoany.com/menu/page.js"></script>
         </div>
@@ -74,24 +73,7 @@ layout: default
       {% endif %}
 
       <!-- Newsletter Signup -->
-      {% if site.mailchimp-list %}
-      <div class="border p-5 bg-lightblue">
-        <div class="row justify-content-between">
-          <div class="col-md-6 mb-2 mb-md-0">
-            <h5 class="font-weight-bold">Join Newsletter</h5>
-            Get the latest insights straight to your inbox. No spam, ever.
-          </div>
-          <div class="col-md-6">
-            <form action="{{ site.mailchimp-list }}" method="post" name="mc-embedded-subscribe-form" class="validate w-100" target="_blank" novalidate>
-              <div class="mc-field-group">
-                <input type="email" placeholder="Enter your email" name="EMAIL" class="required email form-control w-100" id="mce-EMAIL" required>
-                <button type="submit" value="Subscribe" name="subscribe" class="btn btn-success btn-block w-100 mt-2">Subscribe</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      {% endif %}
+      
 
       <!-- Comments -->
       {% if page.comments != false %}
@@ -128,4 +110,5 @@ layout: default
     </div>
   </div>
 </div>
+
 
